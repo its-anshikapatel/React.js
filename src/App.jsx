@@ -1,10 +1,10 @@
-import State from "./state"
+import State from "./2.state"
+import Toggle from "./Toggle"
 
-function App(){
-  return(
+function App() {
+  return (
     <div>
-      <State/>
-
+      <Toggle />
     </div>
   )
 }
