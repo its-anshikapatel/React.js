@@ -8,7 +8,7 @@ function Toggle() {
         <div>
             <h1>Toggle in React Js</h1>
             {
-                display ? <h1>Anshika Patel</h1> :  <h1>"user not found" </h1>
+                display ? <h1>Anshika Patel</h1> : null
 
             }
             <br />
