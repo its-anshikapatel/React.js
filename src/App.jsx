@@ -1,4 +1,6 @@
 
+import ControlComponent from "./10.ControlledComponent";
+import CheckBox from "./11.CheckBox";
 import Props from "./5.Props"
 import Array from "./6.Array";
 import DefaultProps from "./7.DefaultProps";
@@ -41,8 +43,13 @@ function App() {
       </Wrapper> */}
 
       {/* //Input Field */}
-      <InputField />
+      {/* <InputField /> */}
 
+      {/* Controlled Component
+      <ControlComponent/> */}
+
+      //checkbox
+        <CheckBox/>
 
     </div>
   )
