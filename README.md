@@ -65,7 +65,6 @@ React 18.2.0 vs 18.3.0 could break UI. `package-lock.json` avoids this.
 - Entry point of the React app.
 - Renders `<App />` into `root` div.
 
-```jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -78,11 +77,11 @@ root.render(<App />);
 **Answer:**
 React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and efficiently update the DOM using the Virtual DOM.
 
-Real-world usage:
+**Real-world usage:**  
 
-Instagram uses React to render feeds and stories efficiently.
+- Instagram uses React to render feeds and stories efficiently.
 
-Your personal portfolio built with React updates sections without refreshing the whole page.
+- Your personal portfolio built with React updates sections without refreshing the whole page.
 
 
 Example:
@@ -99,7 +98,7 @@ function App() {
 **Answer:**
 The Virtual DOM is a lightweight in-memory representation of the real DOM. React compares the new and old virtual DOM (diffing) and updates only the changed elements in the real DOM (reconciliation).
 
-Real-world usage:
+**Real-world usage:**  
 When you like a post on Facebook, only the like count updates without a full page reload.
 
 
@@ -115,14 +114,14 @@ Functional components: Use hooks, simpler, preferred.
 Class components: Older syntax with lifecycle methods.
 
 
-Real-world usage:
+**Real-world example:**  
 In an e-commerce site:
 
-<Header /> for navigation
+- <Header /> for navigation
 
-<ProductCard /> for each product
+- <ProductCard /> for each product
 
-<Footer /> for the site footer
+- <Footer /> for the site footer
 
 
 Example:
@@ -145,7 +144,7 @@ function ProductCard({ name, price }) {
 Props are read-only inputs passed from a parent component to a child component.
 They help create reusable and configurable components.
 
-Real-world usage:
+**Real-world usage:**  
 Pass user data to a ProfileCard or product info to a ProductCard.
 
 Example:
@@ -162,8 +161,8 @@ function ProfileCard({ name, role }) {
 **Answer:**
 State is mutable data managed within a component. It determines how the component behaves and renders.
 
-Real-world usage:
-Toggle a sidebar, handle form input, or track cart items in an e-commerce app.
+**Real-world usage:**  
+- Toggle a sidebar, handle form input, or track cart items in an e-commerce app.
 
 Example:
 
@@ -190,10 +189,10 @@ Usage	For configuration	For dynamic rendering
 ## 14. What is JSX?
 
 **Answer:**
-JSX (JavaScript XML) lets you write HTML-like code in JavaScript. It gets compiled to React.createElement() calls.
+- JSX (JavaScript XML) lets you write HTML-like code in JavaScript. It gets compiled to React.createElement() calls.
 
-Real-world usage:
-Makes code cleaner by mixing JS logic and UI.
+**Real-world usage:**  
+- Makes code cleaner by mixing JS logic and UI.
 
 Example:
 
@@ -228,7 +227,7 @@ useMemo, useCallback → performance optimization
 **Answer:**
 useState allows you to add state to functional components.
 
-Real-world usage:
+**Real-world usage:**  
 Track the open/closed state of a modal.
 
 Example:
@@ -243,7 +242,7 @@ const [isOpen, setIsOpen] = useState(false);
 **Answer:**
 useEffect lets you perform side effects in functional components (fetching data, subscriptions, DOM updates).
 
-Real-world usage:
+**Real-world usage:**  
 Fetching product data when a page loads.
 
 Example:
@@ -262,7 +261,7 @@ useEffect(() => {
 **Answer:**
 Displaying UI based on certain conditions.
 
-Real-world usage:
+**Real-world usage:**  
 Show “Login” button if not logged in, otherwise show “Profile”.
 
 Example:
@@ -277,7 +276,7 @@ Example:
 **Answer:**
 A library for client-side routing in React apps.
 
-Real-world usage:
+**Real-world usage:**  
 Navigate between Home, About, and Product pages without reload.
 
 Example:
@@ -299,7 +298,7 @@ Controlled: Form data is handled by React state.
 Uncontrolled: Form data handled by the DOM via ref.
 
 
-Real-world usage:
+**Real-world usage:**
 
 Controlled → Login forms
 
@@ -314,7 +313,7 @@ Uncontrolled → File uploads, legacy inputs
 **Answer:**
 Moving state to a common ancestor to share data between sibling components.
 
-Real-world usage:
+**Real-world usage:**
 Sharing a search term between a SearchBar and Results component.
 
 
@@ -326,7 +325,7 @@ Sharing a search term between a SearchBar and Results component.
 Keys help React identify which list items changed, are added, or removed.
 They improve rendering performance.
 
-Real-world usage:
+**Real-world usage:**
 Rendering a dynamic list of products or tasks.
 
 Example:
@@ -356,7 +355,7 @@ Example:
 **Answer:**
 Provides a way to share global data without prop drilling.
 
-Real-world usage:
+**Real-world usage:**
 Theme, authentication, or language settings shared across the app.
 
 
@@ -379,7 +378,7 @@ const theme = useContext(ThemeContext);
 **Answer:**
 useRef gives direct access to DOM elements or stores mutable values.
 
-Real-world usage:
+**Real-world usage:**
 Focus an input on page load.
 
 Example:
@@ -395,7 +394,7 @@ useEffect(() => inputRef.current.focus(), []);
 **Answer:**
 React.memo is a higher-order component that prevents unnecessary re-renders if props haven’t changed.
 
-Real-world usage:
+**Real-world usage:**
 Optimizing performance in large dashboard apps.
 
 
@@ -406,7 +405,7 @@ Optimizing performance in large dashboard apps.
 **Answer:**
 useCallback memoizes callback functions, preventing new references on each render.
 
-Real-world usage:
+**Real-world usage:**
 Passing functions to child components without causing re-renders.
 
 
@@ -417,7 +416,7 @@ Passing functions to child components without causing re-renders.
 **Answer:**
 useMemo memoizes expensive calculations.
 
-Real-world usage:
+**Real-world usage:**
 Filtering or sorting large datasets.
 
 
@@ -440,7 +439,7 @@ Example:
 **Answer:**
 Redux is a state management library that stores app state in a single global store.
 
-Real-world usage:
+**Real-world usage:**
 Used in large apps like Twitter for managing complex states.
 
 
@@ -467,7 +466,7 @@ A component that catches JavaScript errors in its child component tree and displ
 **Answer:**
 Splitting the app into chunks to load only the required code.
 
-Real-world usage:
+**Real-world usage:**
 Load the checkout page only when the user goes to /checkout.
 
 
@@ -490,7 +489,7 @@ const Checkout = React.lazy(() => import('./Checkout'));
 **Answer:**
 Rendering the React app on the server before sending HTML to the browser → improves SEO and load time.
 
-Real-world usage:
+**Real-world usage:**
 Next.js uses SSR for blogs, landing pages, etc.
 
 
@@ -520,7 +519,7 @@ const element = <h1>Hello World</h1>;
 // Transpiled
 const element = React.createElement('h1', null, 'Hello World');
 
-📝 Real-world example:
+📝 **Real-world example:** 
 JSX allows you to write complex UIs like:
 
 {isLoggedIn ? <Dashboard /> : <LoginPage />}
@@ -552,7 +551,7 @@ class Welcome extends React.Component {
   }
 }
 
-📝 Real-world example:
+📝 **Real-world example:** 
 Almost all modern React apps use functional components because they’re simpler and support hooks.
 
 
@@ -567,7 +566,7 @@ The Virtual DOM is a lightweight copy of the real DOM.
 React updates the Virtual DOM first, compares it with the previous version (diffing), and then efficiently updates only the changed parts of the real DOM.
 
 
-📝 Real-world example:
+📝 **Real-world example:** 
 If you update a small piece of text in a large page, React doesn’t re-render the whole page — it finds that one node and updates it, improving performance.
 
 
@@ -594,7 +593,7 @@ function Counter() {
   return <button onClick={() => setCount(count + 1)}>{count}</button>;
 }
 
-📝 Real-world example:
+📝 **Real-world example:** 
 Hooks replaced the need for class lifecycle methods, making components much cleaner and reusable.
 
 
@@ -609,7 +608,7 @@ Mutability	Read-only	Can be updated
 Purpose	Communicate between components	Store local data
 
 
-📝 Real-world example:
+📝 **Real-world example:** 
 A parent component might pass username as a prop, while a Form component might manage its own state for inputText.
 
 
@@ -632,7 +631,7 @@ useEffect(() => {
 Adding variables inside [] lets it run when those change.
 
 
-📝 Real-world example:
+📝 **Real-world example:** 
 Used to fetch user data from an API when the component loads.
 
 
@@ -687,7 +686,7 @@ Uncontrolled Component: Form data is handled by the DOM itself.
 
 <input ref={inputRef} />
 
-📝 Real-world example:
+📝 **Real-world example:** 
 For forms with validation, controlled components are preferred. For simple inputs (like file upload), uncontrolled might be easier.
 
 
@@ -704,7 +703,7 @@ export default function Button() { ... }
 // File: App.js
 import Button from './Button';
 
-📝 Real-world example:
+📝 **Real-world example:** 
 Helps keep code clean — e.g., each component in its own file.
 
 🌍 47. What is React Router and why do we use it?
@@ -729,7 +728,7 @@ function App() {
   );
 }
 
-📝 Real-world example:
+📝 **Real-world example:** 
 In an e-commerce app, clicking on “Cart” or “Product Details” doesn’t reload the page — React Router switches the view seamlessly.
 
 
@@ -744,7 +743,7 @@ Server Config	Needs server setup for routes	No setup needed
 SEO Friendly	✅ Yes	❌ No
 
 
-📝 Real-world example:
+📝 **Real-world example:** 
 
 Use BrowserRouter in production apps where you can configure your server (e.g., Netlify, Vercel).
 
@@ -774,7 +773,7 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
-📝 Real-world example:
+📝 **Real-world example:** 
 If your app shows a white screen, checking index.js or index.html is usually the first debugging step.
 
 
@@ -803,7 +802,7 @@ Used by npm/yarn to install and run the project.
   }
 }
 
-📝 Real-world example:
+📝 **Real-world example:** 
 When you clone a repo and run npm install, this file tells npm which packages to install.
 
 
@@ -823,7 +822,7 @@ Prevents unexpected bugs due to version differences.
 # Ensures same versions everywhere
 npm ci
 
-📝 Real-world example:
+📝 **Real-world example:** 
 A team working on the same project will have identical node_modules because package-lock.json freezes versions.
 
 
@@ -840,7 +839,7 @@ Contains optimized static files (index.html, minified JS, CSS, images).
 This folder is deployed to production servers.
 
 
-📝 Real-world example:
+📝 **Real-world example:** 
 If you deploy your React app to Netlify or Vercel, you upload the build folder — not the src folder.
 
 
@@ -864,7 +863,7 @@ Use Pagination / Infinite Scroll for large data
 
 const MemoizedChild = React.memo(ChildComponent);
 
-📝 Real-world example:
+📝 **Real-world example:** 
 If you have a big dashboard with multiple charts, using React.memo avoids re-rendering all charts every time one filter changes.
 
 
@@ -891,7 +890,7 @@ function App() {
   );
 }
 
-📝 Real-world example:
+📝 **Real-world example:** 
 A blog site can load the “Admin Panel” only when the admin logs in — not for every visitor.
 
 
@@ -905,7 +904,7 @@ npm start	Runs development server with hot reload, unoptimized code
 npm run build	Creates a production build with minified, optimized files
 
 
-📝 Real-world example:
+📝 **Real-world example:** 
 Develop locally with npm start → Deploy optimized version from build folder using npm run build.
 
 
@@ -925,6 +924,6 @@ REACT_APP_API_URL=https://api.example.com
 
 fetch(`${process.env.REACT_APP_API_URL}/users`);
 
-📝 Real-world example:
+📝 **Real-world example:** 
 Switch between dev and production API URLs without changing the code.
 ```
