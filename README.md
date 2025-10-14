@@ -101,27 +101,24 @@ The Virtual DOM is a lightweight in-memory representation of the real DOM. React
 **Real-world usage:**  
 When you like a post on Facebook, only the like count updates without a full page reload.
 
-
 ---
 
 ## 10. What are Components in React?
 
 **Answer:**
-Components are independent, reusable pieces of UI.
-
-Functional components: Use hooks, simpler, preferred.
-
-Class components: Older syntax with lifecycle methods.
+- Components are independent, reusable pieces of UI.
+- Functional components: Use hooks, simpler, preferred.
+- Class components: Older syntax with lifecycle methods.
 
 
 **Real-world example:**  
 In an e-commerce site:
 
-- <Header /> for navigation
+- `<Header />` for navigation
 
-- <ProductCard /> for each product
+- `<ProductCard />` for each product
 
-- <Footer /> for the site footer
+- `<Footer />` for the site footer
 
 
 Example:
@@ -803,14 +800,12 @@ When you clone a repo and run npm install, this file tells npm which packages to
 
 👉 **Answer:**
 
-Ensures consistent dependency versions across different machines.
-
-Locks the exact versions of every installed package and its sub-dependencies.
-
-Prevents unexpected bugs due to version differences.
+- Ensures consistent dependency versions across different machines.
+- Locks the exact versions of every installed package and its sub-dependencies.
+- Prevents unexpected bugs due to version differences.
 
 
-# Ensures same versions everywhere
+### Ensures same versions everywhere
 npm ci
 
 📝 **Real-world example:** 
@@ -823,16 +818,12 @@ A team working on the same project will have identical node_modules because pack
 
 👉 **Answer:**
 
-Created when you run npm run build.
-
-Contains optimized static files (index.html, minified JS, CSS, images).
-
-This folder is deployed to production servers.
-
+- Created when you run npm run build.
+- Contains optimized static files (index.html, minified JS, CSS, images).
+- This folder is deployed to production servers.
 
 📝 **Real-world example:** 
 If you deploy your React app to Netlify or Vercel, you upload the build folder — not the src folder.
-
 
 ---
 
