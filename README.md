@@ -43,7 +43,7 @@ React 18.2.0 vs 18.3.0 could break UI. `package-lock.json` avoids this.
 
 - Logo in `public/` → `<img src="/logo.png" />`
 - Logo in `src/` → `import logo from './logo.png'; <img src={logo} />`
-
+---
 ## 5. Use of `.gitignore` in React
 
 - Tells Git which files/folders to ignore:
@@ -52,6 +52,8 @@ React 18.2.0 vs 18.3.0 could break UI. `package-lock.json` avoids this.
 **Example:**  
 `.env` files with API keys shouldn’t be pushed.
 
+---
+
 ## 6. `npm start` vs `npm run build`
 
 | Command         | Purpose                            |
@@ -59,6 +61,7 @@ React 18.2.0 vs 18.3.0 could break UI. `package-lock.json` avoids this.
 | `npm start`     | Development server with hot reload |
 | `npm run build` | Optimized production build         |
 
+--- 
 ## 7. Role of `index.js`
 **Answer:**
 
@@ -84,7 +87,7 @@ React is a JavaScript library for building user interfaces. It allows developers
 - Your personal portfolio built with React updates sections without refreshing the whole page.
 
 
-Example:
+**Example:**
 
 function App() {
   return <h1 Hello React!</h1>;
@@ -121,8 +124,7 @@ In an e-commerce site:
 - `<Footer />` for the site footer
 
 
-Example:
-
+**Example:**
 function ProductCard({ name, price }) {
   return (
     <div>
@@ -161,7 +163,7 @@ State is mutable data managed within a component. It determines how the componen
 **Real-world usage:**  
 - Toggle a sidebar, handle form input, or track cart items in an e-commerce app.
 
-Example:
+**Example:**
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -175,9 +177,9 @@ function Counter() {
 
 Feature	Props	State
 
-Ownership	Passed from parent	Managed within the component
-Mutability	Immutable (read-only)	Mutable using setState/useState
-Usage	For configuration	For dynamic rendering
+- Ownership	Passed from parent	Managed within the component
+- Mutability	Immutable (read-only)	Mutable using setState/useState
+- Usage	For configuration	For dynamic rendering
 
 ---
 
@@ -189,8 +191,7 @@ Usage	For configuration	For dynamic rendering
 **Real-world usage:**  
 - Makes code cleaner by mixing JS logic and UI.
 
-Example:
-
+**Example:**
 const name = "Anshika";
 const element = <h1>Hello, {name}!</h1>;
 
@@ -203,17 +204,11 @@ const element = <h1>Hello, {name}!</h1>;
 Hooks let you use React features in functional components.
 Common Hooks:
 
-useState → state management
-
+`useState → state management
 useEffect → side effects
-
 useContext → global data
-
 useRef → direct DOM access
-
-useMemo, useCallback → performance optimization
-
-
+useMemo, useCallback → performance optimization`
 
 ---
 
@@ -240,7 +235,7 @@ useEffect lets you perform side effects in functional components (fetching data,
 **Real-world usage:**  
 Fetching product data when a page loads.
 
-Example:
+**Example:**
 
 useEffect(() => {
   fetch('/api/products')
@@ -259,7 +254,7 @@ Displaying UI based on certain conditions.
 **Real-world usage:**  
 Show “Login” button if not logged in, otherwise show “Profile”.
 
-Example:
+**Example:**
 
 {user ? <Profile user={user} /> : <Login />}
 
@@ -274,7 +269,7 @@ A library for client-side routing in React apps.
 **Real-world usage:**  
 Navigate between Home, About, and Product pages without reload.
 
-Example:
+**Example:**
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -288,16 +283,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 ## 20. What are Controlled vs Uncontrolled Components?
 
-Controlled: Form data is handled by React state.
+`Controlled: Form data is handled by React state.
 
 Uncontrolled: Form data handled by the DOM via ref.
-
+`
 
 **Real-world usage:**
 
-Controlled → Login forms
+`Controlled → Login forms
 
-Uncontrolled → File uploads, legacy inputs
+Uncontrolled → File uploads, legacy inputs`
 
 
 
@@ -323,9 +318,9 @@ They improve rendering performance.
 **Real-world usage:**
 Rendering a dynamic list of products or tasks.
 
-Example:
+**Example:**
 
-{items.map(item => <li key={item.id}>{item.name}</li>)}
+`{items.map(item => <li key={item.id}>{item.name}</li>)}`
 
 
 ---
@@ -333,9 +328,9 @@ Example:
 ## 23. What is React Fragment?
 
 **Answer:**
-<React.Fragment> lets you group multiple elements without adding extra DOM nodes.
+`<React.Fragment>` lets you group multiple elements without adding extra DOM nodes.
 
-Example:
+**Example:**
 
 <>
   <h1>Title</h1>
@@ -361,9 +356,9 @@ Theme, authentication, or language settings shared across the app.
 **Answer:**
 useContext lets you consume context values inside components.
 
-Example:
+**Example:**
 
-const theme = useContext(ThemeContext);
+`const theme = useContext(ThemeContext);`
 
 
 ---
@@ -376,7 +371,7 @@ useRef gives direct access to DOM elements or stores mutable values.
 **Real-world usage:**
 Focus an input on page load.
 
-Example:
+**Example:**
 
 const inputRef = useRef();
 useEffect(() => inputRef.current.focus(), []);
@@ -422,7 +417,7 @@ Filtering or sorting large datasets.
 **Answer:**
 Use controlled components with onChange handlers.
 
-Example:
+**Example:**
 
 <input value={email} onChange={e => setEmail(e.target.value)} />
 
@@ -474,7 +469,7 @@ Dynamically load components using React.lazy and Suspense.
 
 Example:
 
-const Checkout = React.lazy(() => import('./Checkout'));
+`const Checkout = React.lazy(() => import('./Checkout'));`
 
 
 ---
@@ -503,16 +498,16 @@ Hydration is attaching event listeners to pre-rendered HTML on the client side a
 - It allows you to write HTML-like syntax inside JavaScript.
 - JSX makes the UI code cleaner and easier to understand.
 - Under the hood, JSX gets transpiled to React.createElement() calls.
-// JSX
+`// JSX
 const element = <h1>Hello World</h1>;
 
 // Transpiled
 const element = React.createElement('h1', null, 'Hello World');
-
+`
 📝 **Real-world example:** 
 JSX allows you to write complex UIs like:
 
-{isLoggedIn ? <Dashboard /> : <LoginPage />}
+`{isLoggedIn ? <Dashboard /> : <LoginPage />}`
 
 Without JSX, this would be more verbose and harder to read.
 
@@ -523,13 +518,13 @@ Without JSX, this would be more verbose and harder to read.
 
 Feature	Functional Component	Class Component
 
-Syntax	Simple function	ES6 Class
-State	useState() Hook	this.state
-Lifecycle	useEffect() Hook	componentDidMount, etc.
-Performance	Generally better	Slightly heavier
+- Syntax	Simple function	ES6 Class
+- State	useState() Hook	this.state
+- Lifecycle	useEffect() Hook	componentDidMount, etc.
+-   Performance	Generally better	Slightly heavier
 
 
-// Functional
+`// Functional
 function Welcome() {
   return <h1 Hello!</h1>;
 }
@@ -539,7 +534,7 @@ class Welcome extends React.Component {
   render() {
     return <h1 Hello!</h1>;
   }
-}
+}`
 
 📝 **Real-world example:** 
 Almost all modern React apps use functional components because they’re simpler and support hooks.
@@ -570,18 +565,16 @@ Hooks are special functions that let you “hook into” React features from fun
 
 Common hooks:
 
-useState → for state management
-
-useEffect → for side effects (e.g., API calls, subscriptions)
-
-useContext, useRef, useMemo, etc.
-
+`- useState → for state management
+- useEffect → for side effects (e.g., API calls, subscriptions)
+- useContext, useRef, useMemo, etc.
+`
 
 
-function Counter() {
+`function Counter() {
   const [count, setCount] = useState(0);
   return <button onClick={() => setCount(count + 1)}>{count}</button>;
-}
+}`
 
 📝 **Real-world example:** 
 Hooks replaced the need for class lifecycle methods, making components much cleaner and reusable.
@@ -593,9 +586,9 @@ Hooks replaced the need for class lifecycle methods, making components much clea
 
 Feature	Props	State
 
-Origin	Passed from parent	Managed inside component
-Mutability	Read-only	Can be updated
-Purpose	Communicate between components	Store local data
+- Origin	Passed from parent	Managed inside component
+- Mutability	Read-only	Can be updated
+- Purpose	Communicate between components	Store local data
 
 
 📝 **Real-world example:** 
@@ -633,13 +626,13 @@ Used to fetch user data from an API when the component loads.
 
 A React Fragment lets you return multiple elements without adding extra DOM nodes.
 
-<!-- 
-return (
+
+`return (
   <>
-    <h1>Title</h1>
-    <p>Description</p>
+    `<h1>Title</h1>`
+    `<p>Description</p>`
   </>
-); -->
+);`
 
 Without fragments, you’d need to wrap everything in a <div>, which can mess up layouts.
 
@@ -655,9 +648,9 @@ Keys help React identify which items changed, added, or removed.
 It improves rendering performance and avoids UI bugs.
 
 
-{items.map(item => (
-  <li key={item.id}>{item.name}</li>
-))}
+`{items.map(item => (
+`  <li key={item.id}>{item.name}</li>
+`))}`
 
 ⚠️ Using index as a key is not recommended if the list can change order.
 
@@ -669,13 +662,13 @@ It improves rendering performance and avoids UI bugs.
 Controlled Component: Form data is handled by React state.
 
 
-<input value={value} onChange={e => setValue(e.target.value)} />
-
+`<input value={value} onChange={e => setValue(e.target.value)} />
+`
 Uncontrolled Component: Form data is handled by the DOM itself.
 
 
-<input ref={inputRef} />
-
+`<input ref={inputRef} />
+`
 📝 **Real-world example:** 
 For forms with validation, controlled components are preferred. For simple inputs (like file upload), uncontrolled might be easier.
 
@@ -711,8 +704,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+       ` <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />`
       </Routes>
     </BrowserRouter>
   );
@@ -771,11 +764,9 @@ If your app shows a white screen, checking index.js or index.html is usually the
 
 👉 **Answer:**
 
-Defines the metadata of the project.
-
-Lists dependencies, scripts, version, and configuration.
-
-Used by npm/yarn to install and run the project.
+- Defines the metadata of the project.
+- Lists dependencies, scripts, version, and configuration.
+- Used by npm/yarn to install and run the project.
 
 
 {
@@ -853,15 +844,15 @@ If you have a big dashboard with multiple charts, using React.memo avoids re-ren
 
 - Reduces initial load time.
 
-import React, { lazy, Suspense } from "react";
+`import React, { lazy, Suspense } from "react";`
 
-const LazyComponent = lazy(() => import("./HeavyComponent"));
+`const LazyComponent = lazy(() => import("./HeavyComponent"));`
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <LazyComponent />
-    </Suspense>
+  `<Suspense fallback={<div>Loading...</div>}>`
+     `<LazyComponent />`
+    `</Suspense>`
   );
 }
 
@@ -893,10 +884,10 @@ Develop locally with npm start → Deploy optimized version from build folder us
 - Variables must start with REACT_APP_ to be used inside React.
 
 # .env
-REACT_APP_API_URL=https://api.example.com
+`REACT_APP_API_URL=https://api.example.com`
 
-fetch(`${process.env.REACT_APP_API_URL}/users`);
-
+`fetch(`${process.env.REACT_APP_API_URL}/users`);
+`
 📝 **Real-world example:** 
 Switch between dev and production API URLs without changing the code.
 ```
