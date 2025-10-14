@@ -60,6 +60,7 @@ React 18.2.0 vs 18.3.0 could break UI. `package-lock.json` avoids this.
 | `npm run build` | Optimized production build         |
 
 ## 7. Role of `index.js`
+**Answer:**
 
 - Entry point of the React app.
 - Renders `<App />` into `root` div.
@@ -72,9 +73,9 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
-1. What is React? Why is it used?
+## 8. What is React? Why is it used?
 
-Answer:
+**Answer:**
 React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and efficiently update the DOM using the Virtual DOM.
 
 Real-world usage:
@@ -93,9 +94,9 @@ function App() {
 
 ---
 
-2. What is the Virtual DOM and how does it work?
+## 9. What is the Virtual DOM and how does it work?
 
-Answer:
+**Answer:**
 The Virtual DOM is a lightweight in-memory representation of the real DOM. React compares the new and old virtual DOM (diffing) and updates only the changed elements in the real DOM (reconciliation).
 
 Real-world usage:
@@ -104,9 +105,9 @@ When you like a post on Facebook, only the like count updates without a full pag
 
 ---
 
-3. What are Components in React?
+## 10. What are Components in React?
 
-Answer:
+**Answer:**
 Components are independent, reusable pieces of UI.
 
 Functional components: Use hooks, simpler, preferred.
@@ -138,9 +139,9 @@ function ProductCard({ name, price }) {
 
 ---
 
-4. What are Props?
+## 11. What are Props?
 
-Answer:
+**Answer:**
 Props are read-only inputs passed from a parent component to a child component.
 They help create reusable and configurable components.
 
@@ -156,9 +157,9 @@ function ProfileCard({ name, role }) {
 
 ---
 
-5. What is State?
+## 12. What is State?
 
-Answer:
+**Answer:**
 State is mutable data managed within a component. It determines how the component behaves and renders.
 
 Real-world usage:
@@ -174,7 +175,7 @@ function Counter() {
 
 ---
 
-6. Difference Between Props and State
+## 13. Difference Between Props and State
 
 Feature	Props	State
 
@@ -186,9 +187,9 @@ Usage	For configuration	For dynamic rendering
 
 ---
 
-7. What is JSX?
+## 14. What is JSX?
 
-Answer:
+**Answer:**
 JSX (JavaScript XML) lets you write HTML-like code in JavaScript. It gets compiled to React.createElement() calls.
 
 Real-world usage:
@@ -202,9 +203,9 @@ const element = <h1>Hello, {name}!</h1>;
 
 ---
 
-8. What are Hooks? Name some common hooks.
+## 15. What are Hooks? Name some common hooks.
 
-Answer:
+**Answer:**
 Hooks let you use React features in functional components.
 Common Hooks:
 
@@ -222,9 +223,9 @@ useMemo, useCallback → performance optimization
 
 ---
 
-9. Explain useState Hook
+16. Explain useState Hook
 
-Answer:
+**Answer:**
 useState allows you to add state to functional components.
 
 Real-world usage:
@@ -237,9 +238,9 @@ const [isOpen, setIsOpen] = useState(false);
 
 ---
 
-10. Explain useEffect Hook
+17. Explain useEffect Hook
 
-Answer:
+**Answer:**
 useEffect lets you perform side effects in functional components (fetching data, subscriptions, DOM updates).
 
 Real-world usage:
@@ -256,9 +257,9 @@ useEffect(() => {
 
 ---
 
-11. What is Conditional Rendering?
+18. What is Conditional Rendering?
 
-Answer:
+**Answer:**
 Displaying UI based on certain conditions.
 
 Real-world usage:
@@ -271,9 +272,9 @@ Example:
 
 ---
 
-12. What is React Router?
+19. What is React Router?
 
-Answer:
+**Answer:**
 A library for client-side routing in React apps.
 
 Real-world usage:
@@ -291,7 +292,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 </BrowserRouter>
 
 
-13. What are Controlled vs Uncontrolled Components?
+20. What are Controlled vs Uncontrolled Components?
 
 Controlled: Form data is handled by React state.
 
@@ -308,9 +309,9 @@ Uncontrolled → File uploads, legacy inputs
 
 ---
 
-14. What is Lifting State Up?
+21. What is Lifting State Up?
 
-Answer:
+**Answer:**
 Moving state to a common ancestor to share data between sibling components.
 
 Real-world usage:
@@ -319,9 +320,9 @@ Sharing a search term between a SearchBar and Results component.
 
 ---
 
-15. What are Keys in React?
+22. What are Keys in React?
 
-Answer:
+**Answer:**
 Keys help React identify which list items changed, are added, or removed.
 They improve rendering performance.
 
@@ -335,9 +336,9 @@ Example:
 
 ---
 
-16. What is React Fragment?
+23. What is React Fragment?
 
-Answer:
+**Answer:**
 <React.Fragment> lets you group multiple elements without adding extra DOM nodes.
 
 Example:
@@ -350,9 +351,9 @@ Example:
 
 ---
 
-17. What is Context API?
+24. What is Context API?
 
-Answer:
+**Answer:**
 Provides a way to share global data without prop drilling.
 
 Real-world usage:
@@ -361,9 +362,9 @@ Theme, authentication, or language settings shared across the app.
 
 ---
 
-18. What is useContext Hook?
+25. What is useContext Hook?
 
-Answer:
+**Answer:**
 useContext lets you consume context values inside components.
 
 Example:
@@ -373,9 +374,9 @@ const theme = useContext(ThemeContext);
 
 ---
 
-19. What is useRef?
+26. What is useRef?
 
-Answer:
+**Answer:**
 useRef gives direct access to DOM elements or stores mutable values.
 
 Real-world usage:
@@ -389,9 +390,9 @@ useEffect(() => inputRef.current.focus(), []);
 
 ---
 
-20. What is React.memo?
+27. What is React.memo?
 
-Answer:
+**Answer:**
 React.memo is a higher-order component that prevents unnecessary re-renders if props haven’t changed.
 
 Real-world usage:
@@ -400,9 +401,9 @@ Optimizing performance in large dashboard apps.
 
 ---
 
-21. What is useCallback?
+28. What is useCallback?
 
-Answer:
+**Answer:**
 useCallback memoizes callback functions, preventing new references on each render.
 
 Real-world usage:
@@ -411,9 +412,9 @@ Passing functions to child components without causing re-renders.
 
 ---
 
-22. What is useMemo?
+29. What is useMemo?
 
-Answer:
+**Answer:**
 useMemo memoizes expensive calculations.
 
 Real-world usage:
@@ -422,9 +423,9 @@ Filtering or sorting large datasets.
 
 ---
 
-23. How to handle forms in React?
+30. How to handle forms in React?
 
-Answer:
+**Answer:**
 Use controlled components with onChange handlers.
 
 Example:
@@ -434,9 +435,9 @@ Example:
 
 ---
 
-24. What is Redux?
+31. What is Redux?
 
-Answer:
+**Answer:**
 Redux is a state management library that stores app state in a single global store.
 
 Real-world usage:
@@ -445,25 +446,25 @@ Used in large apps like Twitter for managing complex states.
 
 ---
 
-25. What is Redux Toolkit?
+32. What is Redux Toolkit?
 
-Answer:
+**Answer:**
 An official, simplified way to use Redux with less boilerplate.
 
 
 ---
 
-26. What is Error Boundary?
+33. What is Error Boundary?
 
-Answer:
+**Answer:**
 A component that catches JavaScript errors in its child component tree and displays a fallback UI.
 
 
 ---
 
-27. What is Code Splitting?
+34. What is Code Splitting?
 
-Answer:
+**Answer:**
 Splitting the app into chunks to load only the required code.
 
 Real-world usage:
@@ -472,9 +473,9 @@ Load the checkout page only when the user goes to /checkout.
 
 ---
 
-28. What is Lazy Loading?
+35. What is Lazy Loading?
 
-Answer:
+**Answer:**
 Dynamically load components using React.lazy and Suspense.
 
 Example:
@@ -484,9 +485,9 @@ const Checkout = React.lazy(() => import('./Checkout'));
 
 ---
 
-29. What is Server-Side Rendering (SSR)?
+36. What is Server-Side Rendering (SSR)?
 
-Answer:
+**Answer:**
 Rendering the React app on the server before sending HTML to the browser → improves SEO and load time.
 
 Real-world usage:
@@ -495,14 +496,14 @@ Next.js uses SSR for blogs, landing pages, etc.
 
 ---
 
-30. What is Hydration?
+37. What is Hydration?
 
-Answer:
+**Answer:**
 Hydration is attaching event listeners to pre-rendered HTML on the client side after SSR.
 
 🧠 1. What is JSX and why is it used in React?
 
-👉 Answer:
+👉 **Answer:**
 
 JSX stands for JavaScript XML.
 
@@ -529,7 +530,7 @@ Without JSX, this would be more verbose and harder to read.
 
 ---
 
-🧰 2. What is the difference between Functional and Class Components?
+🧰 38. What is the difference between Functional and Class Components?
 
 Feature	Functional Component	Class Component
 
@@ -557,9 +558,9 @@ Almost all modern React apps use functional components because they’re simpler
 
 ---
 
-🌐 3. What is Virtual DOM and how does React use it?
+🌐 39. What is Virtual DOM and how does React use it?
 
-👉 Answer:
+👉 **Answer:**
 
 The Virtual DOM is a lightweight copy of the real DOM.
 
@@ -572,9 +573,9 @@ If you update a small piece of text in a large page, React doesn’t re-render t
 
 ---
 
-🌀 4. What are React Hooks?
+🌀 40. What are React Hooks?
 
-👉 Answer:
+👉 **Answer:**
 
 Hooks are special functions that let you “hook into” React features from functional components.
 
@@ -599,7 +600,7 @@ Hooks replaced the need for class lifecycle methods, making components much clea
 
 ---
 
-🧭 5. What is the difference between state and props?
+🧭 41. What is the difference between state and props?
 
 Feature	Props	State
 
@@ -614,9 +615,9 @@ A parent component might pass username as a prop, while a Form component might m
 
 ---
 
-🔄 6. What is useEffect used for in React?
+🔄 42. What is useEffect used for in React?
 
-👉 Answer:
+👉 **Answer:**
 
 useEffect lets you run side effects after rendering: API calls, DOM manipulation, event listeners, timers, etc.
 
@@ -637,9 +638,9 @@ Used to fetch user data from an API when the component loads.
 
 ---
 
-⚡ 7. What is a React Fragment and why is it used?
+⚡ 43. What is a React Fragment and why is it used?
 
-👉 Answer:
+👉 **Answer:**
 
 A React Fragment lets you return multiple elements without adding extra DOM nodes.
 
@@ -656,9 +657,9 @@ Without fragments, you’d need to wrap everything in a <div>, which can mess up
 
 ---
 
-🧩 8. What is the purpose of key in lists?
+🧩 44. What is the purpose of key in lists?
 
-👉 Answer:
+👉 **Answer:**
 
 Keys help React identify which items changed, added, or removed.
 
@@ -674,7 +675,7 @@ It improves rendering performance and avoids UI bugs.
 
 ---
 
-🧠 9. What are Controlled and Uncontrolled Components in React?
+🧠 45. What are Controlled and Uncontrolled Components in React?
 
 Controlled Component: Form data is handled by React state.
 
@@ -692,9 +693,9 @@ For forms with validation, controlled components are preferred. For simple input
 
 ---
 
-⚙️ 10. Why do we need export and import in React?
+⚙️ 46. Why do we need export and import in React?
 
-👉 Answer:
+👉 **Answer:**
 React uses ES Modules to split the code into multiple files for better organization.
 
 // File: Button.js
@@ -706,9 +707,9 @@ import Button from './Button';
 📝 Real-world example:
 Helps keep code clean — e.g., each component in its own file.
 
-🌍 1. What is React Router and why do we use it?
+🌍 47. What is React Router and why do we use it?
 
-👉 Answer:
+👉 **Answer:**
 
 React Router is a library that lets you handle client-side routing in a React application.
 
@@ -734,7 +735,7 @@ In an e-commerce app, clicking on “Cart” or “Product Details” doesn’t 
 
 ---
 
-🧭 2. What is the difference between BrowserRouter and HashRouter?
+🧭 48. What is the difference between BrowserRouter and HashRouter?
 
 Feature	BrowserRouter	HashRouter
 
@@ -753,9 +754,9 @@ Use HashRouter for apps hosted on static servers like GitHub Pages.
 
 ---
 
-📂 3. Which file runs first in a React project created with Create React App (CRA)?
+📂 49. Which file runs first in a React project created with Create React App (CRA)?
 
-👉 Answer:
+👉 **Answer:**
 When you run npm start or yarn start:
 
 1. public/index.html is loaded first — it contains the root <div>.
@@ -779,9 +780,9 @@ If your app shows a white screen, checking index.js or index.html is usually the
 
 ---
 
-📜 4. What is the use of package.json file?
+📜 50. What is the use of package.json file?
 
-👉 Answer:
+👉 **Answer:**
 
 Defines the metadata of the project.
 
@@ -808,9 +809,9 @@ When you clone a repo and run npm install, this file tells npm which packages to
 
 ---
 
-🧾 5. What is the use of package-lock.json?
+🧾 51. What is the use of package-lock.json?
 
-👉 Answer:
+👉 **Answer:**
 
 Ensures consistent dependency versions across different machines.
 
@@ -828,9 +829,9 @@ A team working on the same project will have identical node_modules because pack
 
 ---
 
-🚀 6. What is the purpose of the build folder in React?
+🚀 52. What is the purpose of the build folder in React?
 
-👉 Answer:
+👉 **Answer:**
 
 Created when you run npm run build.
 
@@ -845,9 +846,9 @@ If you deploy your React app to Netlify or Vercel, you upload the build folder �
 
 ---
 
-⚡ 7. How can you optimize performance in a React app?
+⚡ 53. How can you optimize performance in a React app?
 
-👉 Answer:
+👉 **Answer:**
 Common techniques:
 
 Use React.memo to prevent unnecessary re-renders
@@ -869,9 +870,9 @@ If you have a big dashboard with multiple charts, using React.memo avoids re-ren
 
 ---
 
-🧠 8. What is Code Splitting in React and why is it important?
+🧠 54. What is Code Splitting in React and why is it important?
 
-👉 Answer:
+👉 **Answer:**
 
 Code splitting breaks your app into smaller chunks, so users don’t need to load the entire JS bundle at once.
 
@@ -896,7 +897,7 @@ A blog site can load the “Admin Panel” only when the admin logs in — not f
 
 ---
 
-🧠 9. What is the difference between npm start and npm run build?
+🧠 55. What is the difference between npm start and npm run build?
 
 Command	Purpose
 
@@ -910,9 +911,9 @@ Develop locally with npm start → Deploy optimized version from build folder us
 
 ---
 
-🧪 10. Why do we use .env files in React projects?
+🧪 56. Why do we use .env files in React projects?
 
-👉 Answer:
+👉 **Answer:**
 
 .env files store environment variables like API keys, URLs, etc.
 
