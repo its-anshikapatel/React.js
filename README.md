@@ -87,7 +87,7 @@ React is a JavaScript library for building user interfaces. It allows developers
 Example:
 
 function App() {
-  return <h1>Hello React!</h1>;
+  return <h1 Hello React!</h1>;
 }
 
 
@@ -129,7 +129,7 @@ Example:
 function ProductCard({ name, price }) {
   return (
     <div>
-      <h3>{name}</h3>
+      <h3 {name}</h3>
       <p>₹{price}</p>
     </div>
   );
@@ -150,7 +150,7 @@ Pass user data to a ProfileCard or product info to a ProductCard.
 Example:
 
 function ProfileCard({ name, role }) {
-  return <p>{name} – {role}</p>;
+  return <p>{name} – {role}</p;
 }
 
 
@@ -181,8 +181,6 @@ Feature	Props	State
 Ownership	Passed from parent	Managed within the component
 Mutability	Immutable (read-only)	Mutable using setState/useState
 Usage	For configuration	For dynamic rendering
-
-
 
 ---
 
@@ -222,7 +220,7 @@ useMemo, useCallback → performance optimization
 
 ---
 
-16. Explain useState Hook
+## 16. Explain useState Hook
 
 **Answer:**
 useState allows you to add state to functional components.
@@ -237,7 +235,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ---
 
-17. Explain useEffect Hook
+## 17. Explain useEffect Hook
 
 **Answer:**
 useEffect lets you perform side effects in functional components (fetching data, subscriptions, DOM updates).
@@ -256,7 +254,7 @@ useEffect(() => {
 
 ---
 
-18. What is Conditional Rendering?
+## 18. What is Conditional Rendering?
 
 **Answer:**
 Displaying UI based on certain conditions.
@@ -271,7 +269,7 @@ Example:
 
 ---
 
-19. What is React Router?
+## 19. What is React Router?
 
 **Answer:**
 A library for client-side routing in React apps.
@@ -291,7 +289,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 </BrowserRouter>
 
 
-20. What are Controlled vs Uncontrolled Components?
+## 20. What are Controlled vs Uncontrolled Components?
 
 Controlled: Form data is handled by React state.
 
@@ -308,7 +306,7 @@ Uncontrolled → File uploads, legacy inputs
 
 ---
 
-21. What is Lifting State Up?
+## 21. What is Lifting State Up?
 
 **Answer:**
 Moving state to a common ancestor to share data between sibling components.
@@ -319,7 +317,7 @@ Sharing a search term between a SearchBar and Results component.
 
 ---
 
-22. What are Keys in React?
+## 22. What are Keys in React?
 
 **Answer:**
 Keys help React identify which list items changed, are added, or removed.
@@ -335,7 +333,7 @@ Example:
 
 ---
 
-23. What is React Fragment?
+## 23. What is React Fragment?
 
 **Answer:**
 <React.Fragment> lets you group multiple elements without adding extra DOM nodes.
@@ -350,7 +348,7 @@ Example:
 
 ---
 
-24. What is Context API?
+## 24. What is Context API?
 
 **Answer:**
 Provides a way to share global data without prop drilling.
@@ -361,7 +359,7 @@ Theme, authentication, or language settings shared across the app.
 
 ---
 
-25. What is useContext Hook?
+## 25. What is useContext Hook?
 
 **Answer:**
 useContext lets you consume context values inside components.
@@ -373,7 +371,7 @@ const theme = useContext(ThemeContext);
 
 ---
 
-26. What is useRef?
+## 26. What is useRef?
 
 **Answer:**
 useRef gives direct access to DOM elements or stores mutable values.
@@ -389,7 +387,7 @@ useEffect(() => inputRef.current.focus(), []);
 
 ---
 
-27. What is React.memo?
+## 27. What is React.memo?
 
 **Answer:**
 React.memo is a higher-order component that prevents unnecessary re-renders if props haven’t changed.
@@ -400,7 +398,7 @@ Optimizing performance in large dashboard apps.
 
 ---
 
-28. What is useCallback?
+## 28. What is useCallback?
 
 **Answer:**
 useCallback memoizes callback functions, preventing new references on each render.
@@ -411,7 +409,7 @@ Passing functions to child components without causing re-renders.
 
 ---
 
-29. What is useMemo?
+## 29. What is useMemo?
 
 **Answer:**
 useMemo memoizes expensive calculations.
@@ -422,7 +420,7 @@ Filtering or sorting large datasets.
 
 ---
 
-30. How to handle forms in React?
+## 30. How to handle forms in React?
 
 **Answer:**
 Use controlled components with onChange handlers.
@@ -434,7 +432,7 @@ Example:
 
 ---
 
-31. What is Redux?
+## 31. What is Redux?
 
 **Answer:**
 Redux is a state management library that stores app state in a single global store.
@@ -445,7 +443,7 @@ Used in large apps like Twitter for managing complex states.
 
 ---
 
-32. What is Redux Toolkit?
+## 32. What is Redux Toolkit?
 
 **Answer:**
 An official, simplified way to use Redux with less boilerplate.
@@ -453,7 +451,7 @@ An official, simplified way to use Redux with less boilerplate.
 
 ---
 
-33. What is Error Boundary?
+## 33. What is Error Boundary?
 
 **Answer:**
 A component that catches JavaScript errors in its child component tree and displays a fallback UI.
@@ -461,7 +459,7 @@ A component that catches JavaScript errors in its child component tree and displ
 
 ---
 
-34. What is Code Splitting?
+## 34. What is Code Splitting?
 
 **Answer:**
 Splitting the app into chunks to load only the required code.
@@ -472,7 +470,7 @@ Load the checkout page only when the user goes to /checkout.
 
 ---
 
-35. What is Lazy Loading?
+## 35. What is Lazy Loading?
 
 **Answer:**
 Dynamically load components using React.lazy and Suspense.
@@ -484,7 +482,7 @@ const Checkout = React.lazy(() => import('./Checkout'));
 
 ---
 
-36. What is Server-Side Rendering (SSR)?
+## 36. What is Server-Side Rendering (SSR)?
 
 **Answer:**
 Rendering the React app on the server before sending HTML to the browser → improves SEO and load time.
@@ -495,7 +493,7 @@ Next.js uses SSR for blogs, landing pages, etc.
 
 ---
 
-37. What is Hydration?
+## 37. What is Hydration?
 
 **Answer:**
 Hydration is attaching event listeners to pre-rendered HTML on the client side after SSR.
@@ -504,15 +502,10 @@ Hydration is attaching event listeners to pre-rendered HTML on the client side a
 
 👉 **Answer:**
 
-JSX stands for JavaScript XML.
-
-It allows you to write HTML-like syntax inside JavaScript.
-
-JSX makes the UI code cleaner and easier to understand.
-
-Under the hood, JSX gets transpiled to React.createElement() calls.
-
-
+- JSX stands for JavaScript XML.
+- It allows you to write HTML-like syntax inside JavaScript.
+- JSX makes the UI code cleaner and easier to understand.
+- Under the hood, JSX gets transpiled to React.createElement() calls.
 // JSX
 const element = <h1>Hello World</h1>;
 
@@ -529,7 +522,7 @@ Without JSX, this would be more verbose and harder to read.
 
 ---
 
-🧰 38. What is the difference between Functional and Class Components?
+## 🧰 38. What is the difference between Functional and Class Components?
 
 Feature	Functional Component	Class Component
 
@@ -541,13 +534,13 @@ Performance	Generally better	Slightly heavier
 
 // Functional
 function Welcome() {
-  return <h1>Hello!</h1>;
+  return <h1 Hello!</h1>;
 }
 
 // Class
 class Welcome extends React.Component {
   render() {
-    return <h1>Hello!</h1>;
+    return <h1 Hello!</h1>;
   }
 }
 
@@ -557,7 +550,7 @@ Almost all modern React apps use functional components because they’re simpler
 
 ---
 
-🌐 39. What is Virtual DOM and how does React use it?
+## 🌐 39. What is Virtual DOM and how does React use it?
 
 👉 **Answer:**
 
@@ -572,7 +565,7 @@ If you update a small piece of text in a large page, React doesn’t re-render t
 
 ---
 
-🌀 40. What are React Hooks?
+## 🌀 40. What are React Hooks?
 
 👉 **Answer:**
 
@@ -599,7 +592,7 @@ Hooks replaced the need for class lifecycle methods, making components much clea
 
 ---
 
-🧭 41. What is the difference between state and props?
+## 🧭 41. What is the difference between state and props?
 
 Feature	Props	State
 
@@ -614,7 +607,7 @@ A parent component might pass username as a prop, while a Form component might m
 
 ---
 
-🔄 42. What is useEffect used for in React?
+## 🔄 42. What is useEffect used for in React?
 
 👉 **Answer:**
 
@@ -637,26 +630,26 @@ Used to fetch user data from an API when the component loads.
 
 ---
 
-⚡ 43. What is a React Fragment and why is it used?
+## ⚡ 43. What is a React Fragment and why is it used?
 
 👉 **Answer:**
 
 A React Fragment lets you return multiple elements without adding extra DOM nodes.
 
-
+<!-- 
 return (
   <>
     <h1>Title</h1>
     <p>Description</p>
   </>
-);
+); -->
 
 Without fragments, you’d need to wrap everything in a <div>, which can mess up layouts.
 
 
 ---
 
-🧩 44. What is the purpose of key in lists?
+## 🧩 44. What is the purpose of key in lists?
 
 👉 **Answer:**
 
@@ -674,7 +667,7 @@ It improves rendering performance and avoids UI bugs.
 
 ---
 
-🧠 45. What are Controlled and Uncontrolled Components in React?
+## 🧠 45. What are Controlled and Uncontrolled Components in React?
 
 Controlled Component: Form data is handled by React state.
 
@@ -692,7 +685,7 @@ For forms with validation, controlled components are preferred. For simple input
 
 ---
 
-⚙️ 46. Why do we need export and import in React?
+## ⚙️ 46. Why do we need export and import in React?
 
 👉 **Answer:**
 React uses ES Modules to split the code into multiple files for better organization.
@@ -706,13 +699,13 @@ import Button from './Button';
 📝 **Real-world example:** 
 Helps keep code clean — e.g., each component in its own file.
 
-🌍 47. What is React Router and why do we use it?
+## 🌍 47. What is React Router and why do we use it?
 
 👉 **Answer:**
 
-React Router is a library that lets you handle client-side routing in a React application.
+- React Router is a library that lets you handle client-side routing in a React application.
 
-Instead of loading a new HTML page for each route, React Router dynamically updates the UI and keeps the app as a Single Page Application (SPA).
+- Instead of loading a new HTML page for each route, React Router dynamically updates the UI and keeps the app as a Single Page Application (SPA).
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -734,7 +727,7 @@ In an e-commerce app, clicking on “Cart” or “Product Details” doesn’t 
 
 ---
 
-🧭 48. What is the difference between BrowserRouter and HashRouter?
+## 🧭 48. What is the difference between BrowserRouter and HashRouter?
 
 Feature	BrowserRouter	HashRouter
 
@@ -745,15 +738,15 @@ SEO Friendly	✅ Yes	❌ No
 
 📝 **Real-world example:** 
 
-Use BrowserRouter in production apps where you can configure your server (e.g., Netlify, Vercel).
+- Use BrowserRouter in production apps where you can configure your server (e.g., Netlify, Vercel).
 
-Use HashRouter for apps hosted on static servers like GitHub Pages.
+- Use HashRouter for apps hosted on static servers like GitHub Pages.
 
 
 
 ---
 
-📂 49. Which file runs first in a React project created with Create React App (CRA)?
+## 📂 49. Which file runs first in a React project created with Create React App (CRA)?
 
 👉 **Answer:**
 When you run npm start or yarn start:
@@ -762,7 +755,6 @@ When you run npm start or yarn start:
 
 
 2. src/index.js is executed, which renders your main <App /> component into that root div.
-
 
 
 // index.js
@@ -776,10 +768,9 @@ root.render(<App />);
 📝 **Real-world example:** 
 If your app shows a white screen, checking index.js or index.html is usually the first debugging step.
 
-
 ---
 
-📜 50. What is the use of package.json file?
+## 📜 50. What is the use of package.json file?
 
 👉 **Answer:**
 
@@ -808,7 +799,7 @@ When you clone a repo and run npm install, this file tells npm which packages to
 
 ---
 
-🧾 51. What is the use of package-lock.json?
+## 🧾 51. What is the use of package-lock.json?
 
 👉 **Answer:**
 
@@ -828,7 +819,7 @@ A team working on the same project will have identical node_modules because pack
 
 ---
 
-🚀 52. What is the purpose of the build folder in React?
+## 🚀 52. What is the purpose of the build folder in React?
 
 👉 **Answer:**
 
@@ -845,38 +836,31 @@ If you deploy your React app to Netlify or Vercel, you upload the build folder �
 
 ---
 
-⚡ 53. How can you optimize performance in a React app?
+## ⚡ 53. How can you optimize performance in a React app?
 
 👉 **Answer:**
 Common techniques:
 
-Use React.memo to prevent unnecessary re-renders
-
-Use useMemo / useCallback for expensive calculations or stable functions
-
-Code-splitting using React.lazy and Suspense
-
-Avoid inline functions in render (where possible)
-
-Use Pagination / Infinite Scroll for large data
-
+- Use React.memo to prevent unnecessary re-renders
+- Use useMemo / useCallback for expensive calculations or stable functions
+- Code-splitting using React.lazy and Suspense
+- Avoid inline functions in render (where possible)
+- Use Pagination / Infinite Scroll for large data
 
 const MemoizedChild = React.memo(ChildComponent);
 
 📝 **Real-world example:** 
 If you have a big dashboard with multiple charts, using React.memo avoids re-rendering all charts every time one filter changes.
 
-
 ---
 
-🧠 54. What is Code Splitting in React and why is it important?
+## 🧠 54. What is Code Splitting in React and why is it important?
 
 👉 **Answer:**
 
-Code splitting breaks your app into smaller chunks, so users don’t need to load the entire JS bundle at once.
+- Code splitting breaks your app into smaller chunks, so users don’t need to load the entire JS bundle at once.
 
-Reduces initial load time.
-
+- Reduces initial load time.
 
 import React, { lazy, Suspense } from "react";
 
@@ -896,28 +880,26 @@ A blog site can load the “Admin Panel” only when the admin logs in — not f
 
 ---
 
-🧠 55. What is the difference between npm start and npm run build?
+## 🧠 55. What is the difference between npm start and npm run build?
 
 Command	Purpose
 
-npm start	Runs development server with hot reload, unoptimized code
-npm run build	Creates a production build with minified, optimized files
+- npm start:	Runs development server with hot reload, unoptimized code
+- npm run build:	Creates a production build with minified, optimized files
 
 
 📝 **Real-world example:** 
 Develop locally with npm start → Deploy optimized version from build folder using npm run build.
 
-
 ---
 
-🧪 56. Why do we use .env files in React projects?
+## 🧪 56. Why do we use .env files in React projects?
 
 👉 **Answer:**
 
-.env files store environment variables like API keys, URLs, etc.
+- .env files store environment variables like API keys, URLs, etc.
 
-Variables must start with REACT_APP_ to be used inside React.
-
+- Variables must start with REACT_APP_ to be used inside React.
 
 # .env
 REACT_APP_API_URL=https://api.example.com
