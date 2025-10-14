@@ -90,7 +90,7 @@ React is a JavaScript library for building user interfaces. It allows developers
 **Example:**
 
 function App() {
-  return <h1 Hello React!</h1>;
+  return` <h1> Hello React!</h1>;`
 }
 
 
@@ -128,8 +128,8 @@ In an e-commerce site:
 function ProductCard({ name, price }) {
   return (
     <div>
-      <h3 {name}</h3>
-      <p>₹{price}</p>
+      `<h3> {name}</h3>`
+      `<p>₹{price}</p>`
     </div>
   );
 }
@@ -149,7 +149,7 @@ Pass user data to a ProfileCard or product info to a ProductCard.
 Example:
 
 function ProfileCard({ name, role }) {
-  return <p>{name} – {role}</p;
+  `return <p>{name} – {role}</p;`
 }
 
 
@@ -167,7 +167,7 @@ State is mutable data managed within a component. It determines how the componen
 
 function Counter() {
   const [count, setCount] = useState(0);
-  return <button onClick={() => setCount(count + 1)}>{count}</button>;
+  return `<button onClick={() => setCount(count + 1)}>{count}</button>;`
 }
 
 
@@ -193,7 +193,7 @@ Feature	Props	State
 
 **Example:**
 const name = "Anshika";
-const element = <h1>Hello, {name}!</h1>;
+const element = `<h1>Hello, {name}!</h1>;`
 
 
 ---
@@ -204,11 +204,11 @@ const element = <h1>Hello, {name}!</h1>;
 Hooks let you use React features in functional components.
 Common Hooks:
 
-`useState → state management
-useEffect → side effects
-useContext → global data
-useRef → direct DOM access
-useMemo, useCallback → performance optimization`
+`useState → state management`
+`useEffect → side effects`
+`useContext → global data`
+`useRef → direct DOM access`
+`useMemo, useCallback → performance optimization`
 
 ---
 
@@ -222,7 +222,7 @@ Track the open/closed state of a modal.
 
 Example:
 
-const [isOpen, setIsOpen] = useState(false);
+`const [isOpen, setIsOpen] = useState(false);`
 
 
 ---
@@ -237,11 +237,11 @@ Fetching product data when a page loads.
 
 **Example:**
 
-useEffect(() => {
-  fetch('/api/products')
-    .then(res => res.json())
-    .then(data => setProducts(data));
-}, []);
+`useEffect(() => {`
+  `fetch('/api/products')`
+    `.then(res => res.json())`
+    `.then(data => setProducts(data));`
+`}, []);`
 
 
 ---
@@ -256,7 +256,7 @@ Show “Login” button if not logged in, otherwise show “Profile”.
 
 **Example:**
 
-{user ? <Profile user={user} /> : <Login />}
+`{user ? <Profile user={user} /> : <Login />}`
 
 
 ---
@@ -271,7 +271,7 @@ Navigate between Home, About, and Product pages without reload.
 
 **Example:**
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+`import { BrowserRouter, Routes, Route } from 'react-router-dom';`
 
 <BrowserRouter>
   <Routes>
@@ -283,18 +283,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 ## 20. What are Controlled vs Uncontrolled Components?
 
-`Controlled: Form data is handled by React state.
+- Controlled: Form data is handled by React state.
+- Uncontrolled: Form data handled by the DOM via ref.
 
-Uncontrolled: Form data handled by the DOM via ref.
-`
 
 **Real-world usage:**
 
-`Controlled → Login forms
-
-Uncontrolled → File uploads, legacy inputs`
-
-
+`Controlled → Login forms`
+`Uncontrolled → File uploads, legacy inputs`
 
 ---
 
@@ -332,10 +328,10 @@ Rendering a dynamic list of products or tasks.
 
 **Example:**
 
-<>
-  <h1>Title</h1>
-  <p>Subtitle</p>
-</>
+`<>`
+  `<h1>Title</h1>`
+  `<p>Subtitle</p>`
+`</>`
 
 
 ---
@@ -373,8 +369,8 @@ Focus an input on page load.
 
 **Example:**
 
-const inputRef = useRef();
-useEffect(() => inputRef.current.focus(), []);
+`const inputRef = useRef();`
+`useEffect(() => inputRef.current.focus(), []);`
 
 
 ---
@@ -419,7 +415,7 @@ Use controlled components with onChange handlers.
 
 **Example:**
 
-<input value={email} onChange={e => setEmail(e.target.value)} />
+`<input value={email} onChange={e => setEmail(e.target.value)} />`
 
 
 ---
@@ -498,12 +494,12 @@ Hydration is attaching event listeners to pre-rendered HTML on the client side a
 - It allows you to write HTML-like syntax inside JavaScript.
 - JSX makes the UI code cleaner and easier to understand.
 - Under the hood, JSX gets transpiled to React.createElement() calls.
-`// JSX
-const element = <h1>Hello World</h1>;
+// JSX
+`const element = <h1>Hello World</h1>;`
 
 // Transpiled
 const element = React.createElement('h1', null, 'Hello World');
-`
+
 📝 **Real-world example:** 
 JSX allows you to write complex UIs like:
 
@@ -521,24 +517,23 @@ Feature	Functional Component	Class Component
 - Syntax	Simple function	ES6 Class
 - State	useState() Hook	this.state
 - Lifecycle	useEffect() Hook	componentDidMount, etc.
--   Performance	Generally better	Slightly heavier
+- Performance	Generally better	Slightly heavier
 
 
-`// Functional
+// Functional
 function Welcome() {
-  return <h1 Hello!</h1>;
+  `return <h1 Hello!</h1>;`
 }
 
 // Class
 class Welcome extends React.Component {
   render() {
-    return <h1 Hello!</h1>;
+    `return <h1 Hello!</h1>;`
   }
-}`
+}
 
 📝 **Real-world example:** 
 Almost all modern React apps use functional components because they’re simpler and support hooks.
-
 
 ---
 
@@ -546,9 +541,9 @@ Almost all modern React apps use functional components because they’re simpler
 
 👉 **Answer:**
 
-The Virtual DOM is a lightweight copy of the real DOM.
+- The Virtual DOM is a lightweight copy of the real DOM.
 
-React updates the Virtual DOM first, compares it with the previous version (diffing), and then efficiently updates only the changed parts of the real DOM.
+- React updates the Virtual DOM first, compares it with the previous version (diffing), and then efficiently updates only the changed parts of the real DOM.
 
 
 📝 **Real-world example:** 
@@ -565,16 +560,16 @@ Hooks are special functions that let you “hook into” React features from fun
 
 Common hooks:
 
-`- useState → for state management
+- useState → for state management
 - useEffect → for side effects (e.g., API calls, subscriptions)
 - useContext, useRef, useMemo, etc.
 `
 
 
-`function Counter() {
-  const [count, setCount] = useState(0);
-  return <button onClick={() => setCount(count + 1)}>{count}</button>;
-}`
+`function Counter() {`
+ ` const [count, setCount] = useState(0);`
+  `return <button onClick={() => setCount(count + 1)}>{count}</button>;`
+`}`
 
 📝 **Real-world example:** 
 Hooks replaced the need for class lifecycle methods, making components much cleaner and reusable.
@@ -648,8 +643,8 @@ Keys help React identify which items changed, added, or removed.
 It improves rendering performance and avoids UI bugs.
 
 
-`{items.map(item => (
-`  <li key={item.id}>{item.name}</li>
+`{items.map(item => (`
+  `<li key={item.id}>{item.name}</li>`
 `))}`
 
 ⚠️ Using index as a key is not recommended if the list can change order.
@@ -662,13 +657,13 @@ It improves rendering performance and avoids UI bugs.
 Controlled Component: Form data is handled by React state.
 
 
-`<input value={value} onChange={e => setValue(e.target.value)} />
-`
+`<input value={value} onChange={e => setValue(e.target.value)} />`
+
 Uncontrolled Component: Form data is handled by the DOM itself.
 
 
-`<input ref={inputRef} />
-`
+`<input ref={inputRef} />`
+
 📝 **Real-world example:** 
 For forms with validation, controlled components are preferred. For simple inputs (like file upload), uncontrolled might be easier.
 
@@ -681,10 +676,10 @@ For forms with validation, controlled components are preferred. For simple input
 React uses ES Modules to split the code into multiple files for better organization.
 
 // File: Button.js
-export default function Button() { ... }
+`export default function Button() { ... }`
 
 // File: App.js
-import Button from './Button';
+`import Button from './Button';`
 
 📝 **Real-world example:** 
 Helps keep code clean — e.g., each component in its own file.
@@ -698,14 +693,14 @@ Helps keep code clean — e.g., each component in its own file.
 - Instead of loading a new HTML page for each route, React Router dynamically updates the UI and keeps the app as a Single Page Application (SPA).
 
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from `"react-router-dom"`;
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-       ` <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />`
+        `<Route path="/" element={<Home />} />`
+        `<Route path="/about" element={<About />} />`
       </Routes>
     </BrowserRouter>
   );
@@ -719,11 +714,11 @@ In an e-commerce app, clicking on “Cart” or “Product Details” doesn’t 
 
 ## 🧭 48. What is the difference between BrowserRouter and HashRouter?
 
-Feature	BrowserRouter	HashRouter
-
-URL Format	/about	/#/about
-Server Config	Needs server setup for routes	No setup needed
-SEO Friendly	✅ Yes	❌ No
+| Feature	     |  BrowserRouter           	  |  HashRouter      |
+|--------------|------------------------------|------------------|
+| URL Format	 |   /about	                    |  /#/about        |
+| Server Config|Needs server setup for routes	|  No setup needed |
+| SEO Friendly |     ✅ Yes                   |	❌ No          |
 
 
 📝 **Real-world example:** 
