@@ -1,6 +1,9 @@
 
 import ControlComponent from "./10.ControlledComponent";
 import CheckBox from "./11.CheckBox";
+import Radio from "./12.Radio&Dropdown";
+import Loops from "./13.Loops";
+import Clock from "./14.Clock";
 import Props from "./5.Props"
 import Array from "./6.Array";
 import DefaultProps from "./7.DefaultProps";
@@ -26,7 +29,7 @@ function App() {
 
   return (
     <div>
-      
+
       {/* <Props name="anshika" a={age} /> */}
       {/* <Props user1={userObject} user2={secondObject} /> */}
 
@@ -34,8 +37,7 @@ function App() {
 
       {/* Default Props */}
       {/* If we dont pass any value  */}
-      {/* <DefaultProps  name={"anshika"}/>
- */}
+      {/* <DefaultProps  name={"anshika"}/> */}
 
       {/* //Wrapper 
       <Wrapper>
@@ -48,8 +50,14 @@ function App() {
       {/* Controlled Component
       <ControlComponent/> */}
 
-      //checkbox
-        <CheckBox/>
+      {/* //checkbox */}
+      {/* <CheckBox/> */}
+
+      {/* //Radio & Dropdown */}
+      {/* <Radio/> */}
+
+      {/* <Loops/> */}
+        <Clock/>
 
     </div>
   )

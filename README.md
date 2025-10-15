@@ -1,3 +1,6 @@
+
+
+
 ## 1. Which file runs first in a React project?
 
 **Answer:**  
@@ -622,14 +625,14 @@ Used to fetch user data from an API when the component loads.
 A React Fragment lets you return multiple elements without adding extra DOM nodes.
 
 
-`return (
+return (
   <>
     `<h1>Title</h1>`
     `<p>Description</p>`
   </>
-);`
+);
 
-Without fragments, you’d need to wrap everything in a <div>, which can mess up layouts.
+Without fragments, you’d need to wrap everything in a `<div>`, which can mess up layouts.
 
 
 ---
@@ -638,9 +641,8 @@ Without fragments, you’d need to wrap everything in a <div>, which can mess up
 
 👉 **Answer:**
 
-Keys help React identify which items changed, added, or removed.
-
-It improves rendering performance and avoids UI bugs.
+- Keys help React identify which items changed, added, or removed.
+- It improves rendering performance and avoids UI bugs.
 
 
 `{items.map(item => (`
@@ -736,10 +738,9 @@ In an e-commerce app, clicking on “Cart” or “Product Details” doesn’t 
 👉 **Answer:**
 When you run npm start or yarn start:
 
-1. public/index.html is loaded first — it contains the root <div>.
+1. public/index.html is loaded first — it contains the root `<div>`.
 
-
-2. src/index.js is executed, which renders your main <App /> component into that root div.
+2. src/index.js is executed, which renders your main `<App /> `component into that root div.
 
 
 // index.js
@@ -748,6 +749,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+<br/>
 root.render(<App />);
 
 📝 **Real-world example:** 
