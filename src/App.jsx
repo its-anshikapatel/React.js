@@ -4,6 +4,8 @@ import CheckBox from "./11.CheckBox";
 import Radio from "./12.Radio&Dropdown";
 import Loops from "./13.Loops";
 import Clock from "./14.Clock";
+import Hooks from "./15.Hooks";
+import UseEffect from "./16.useEffect";
 import Props from "./5.Props"
 import Array from "./6.Array";
 import DefaultProps from "./7.DefaultProps";
@@ -57,7 +59,11 @@ function App() {
       {/* <Radio/> */}
 
       {/* <Loops/> */}
-        <Clock/>
+        {/* <Clock/> */}
+{/* 
+        <Hooks/> */}
+
+        <UseEffect/>
 
     </div>
   )
