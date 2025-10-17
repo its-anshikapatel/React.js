@@ -6,6 +6,9 @@ import Loops from "./13.Loops";
 import Clock from "./14.Clock";
 import Hooks from "./15.Hooks";
 import UseEffect from "./16.useEffect";
+import HandleProps from "./17.HandleProps";
+import LifeCycle from "./19.HumanLifeCycle&ReactLifeCycle";
+import HumanLifeCycle from "./19.HumanLifeCycle&ReactLifeCycle";
 import Props from "./5.Props"
 import Array from "./6.Array";
 import DefaultProps from "./7.DefaultProps";
@@ -63,7 +66,11 @@ function App() {
 {/* 
         <Hooks/> */}
 
-        <UseEffect/>
+        {/* <UseEffect/> */}
+
+        {/* <HandleProps/> */}
+
+        <LifeCycle/>
 
     </div>
   )
