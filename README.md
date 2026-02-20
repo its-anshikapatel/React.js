@@ -4,7 +4,7 @@
 ## 1. Which file runs first in a React project?
 
 **Answer:**  
-In a typical React project (using CRA):
+In a typical React project(using CRA):
 
 - `index.html` is the HTML skeleton that loads first.
 - `src/index.js` renders `<App />` into the root div.
