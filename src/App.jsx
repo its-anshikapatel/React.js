@@ -1,4 +1,5 @@
 
+import Function from "./1.Function";
 import ControlComponent from "./10.ControlledComponent";
 import CheckBox from "./11.CheckBox";
 import Radio from "./12.Radio&Dropdown";
@@ -35,6 +36,8 @@ function App() {
   return (
     <div>
 
+      <Function/>
+
       {/* <Props name="anshika" a={age} /> */}
       {/* <Props user1={userObject} user2={secondObject} /> */}
 
@@ -70,7 +73,9 @@ function App() {
 
         {/* <HandleProps/> */}
 
-        <LifeCycle/>
+        {/* <LifeCycle/> */}
+
+       
 
     </div>
   )
